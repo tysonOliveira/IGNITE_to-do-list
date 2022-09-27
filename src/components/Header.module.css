@@ -1,0 +1,23 @@
+.title {
+  width: auto;
+  height: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: inter, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: #0D0D0D;
+  color: #4EA8DE;
+}
+
+img {
+  height: 2.8rem;
+  margin-top: 0.72rem;;
+}
+
+span {
+  color: #5E60CE;
+}
+
