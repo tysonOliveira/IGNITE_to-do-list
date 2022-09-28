@@ -1,0 +1,29 @@
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 0.5rem;
+  bottom: 1.7rem;
+
+}
+
+.taskName {
+  width: 39.875rem;
+  height: 3.375rem;
+  padding-left: 1rem;
+  border:  1px solid #0D0D0D;
+  border-radius: 8px;
+  outline: 0;
+  color: #808080;
+  background: #262626;
+}
+
+.createTaskButton {
+  width: 5.625rem;
+  height: 3.375rem;
+  color: #fff;
+  background: #1E6F9F;
+  border: 0 none;
+  border-radius: 8px;
+}
