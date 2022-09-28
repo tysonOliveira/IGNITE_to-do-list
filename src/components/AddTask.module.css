@@ -34,3 +34,31 @@
   font-weight: 700;
   font-size: 0.875rem;
 }
+
+.taskInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.taskInfoHeader {
+  width: 46rem;
+  display: flex;
+  justify-content: space-between; 
+  font-weight: 700;
+  
+}
+
+.info {
+  width: 1.5625rem;
+  height: 1.1875rem;
+  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+  background: #333333;
+  color: #fff;
+  border-radius: 20px;
+  
+}
+
+.createdTask {
+  color: #4EA8DE;
+}
