@@ -1,13 +1,18 @@
+.taskCard + .taskCard {
+  margin: 0 0 0.75rem 0;
+}
+
 .taskCard {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 0.75rem 0;
   padding: 1rem;
   width: 46rem;
   height: 4.5rem;
   border-radius: 8px;
   background: #333333;
+  color: #F2F2F2;
 }
 
 .taskCard input {
@@ -20,6 +25,11 @@
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
+  transition: 0.1s;
+}
+
+.taskCard input:hover { 
+  border-color: #1E6F9F;
 }
 
 .taskCard p {

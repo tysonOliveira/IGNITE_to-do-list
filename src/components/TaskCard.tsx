@@ -9,7 +9,7 @@ interface N {
 export function TaskCard(item: N) {
   return (
     <div className={style.taskCard}>
-      <input type="checkbox" />
+      <input type="checkbox" checked />
       <p>{item.text}</p>
       <a> <Trash size={25} /></a>
     </div>

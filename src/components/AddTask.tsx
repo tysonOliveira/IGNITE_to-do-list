@@ -5,11 +5,7 @@ import style from './AddTask.module.css';
 import { TaskArea } from './TaskArea';
 import { TaskCard } from './TaskCard';
 
-interface S {
-  text: string;
-}
-
-export function AddTask(props: S) {
+export function AddTask() {
   const taskNumbers = 0;
   const sum = [{
     text: 'thaison reis de oliveira',
