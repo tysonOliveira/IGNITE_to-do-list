@@ -1,0 +1,24 @@
+.taskArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  gap: 1rem;
+  width: 46rem;
+  height: 15.25rem;
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+  color: #808080;
+}
+
+.taskArea p:first-child {
+  font-weight: 900;
+}
+
+.taskArea div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

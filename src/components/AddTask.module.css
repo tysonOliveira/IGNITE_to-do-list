@@ -33,11 +33,18 @@
   border-radius: 8px;
   font-weight: 700;
   font-size: 0.875rem;
+  transition: 0.1s;
+}
+
+.createTaskButton:hover {
+  background: #4EA8DE;
+  cursor: pointer;
 }
 
 .taskInfo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
 }
 
@@ -46,7 +53,6 @@
   display: flex;
   justify-content: space-between; 
   font-weight: 700;
-  
 }
 
 .info {
@@ -56,9 +62,11 @@
   background: #333333;
   color: #fff;
   border-radius: 20px;
-  
+  font-weight: 400;
+  margin-left: 0.5rem;
 }
 
 .createdTask {
   color: #4EA8DE;
 }
+
