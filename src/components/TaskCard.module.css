@@ -15,21 +15,32 @@
   color: #F2F2F2;
 }
 
-.taskCard input {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 1rem;
-  vertical-align: middle;
-  border: 2px solid #4EA8DE;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   cursor: pointer;
-  transition: 0.1s;
 }
 
-.taskCard input:hover { 
-  border-color: #1E6F9F;
+input{
+  all: unset;  /* Retira o estilo padrão do checkbox */
+  border: 2px solid #1E6F9F;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+input:checked {
+  background-color: #5E60CE;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #5E60CE;
+  border-radius: 50%;
+}
+
+.check {
+  position: absolute;
 }
 
 .taskCard p {
@@ -40,4 +51,8 @@
 .taskCard a:hover {
   color: #E25858;
   cursor: pointer;
+}
+
+.taskCompleted {
+  text-decoration-line: line-through;
 }

@@ -8,17 +8,14 @@ import { TaskCard } from './TaskCard';
 export function AddTask() {
   const taskNumbers = 0;
   const sum = [{
-    text: 'thaison reis de oliveira',
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia enim doloremque omnis totam soluta voluptates eligendi quos amet quam rerum',
   },{
-    text: 'thaison reis de oliveira'
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia enim doloremque omnis totam soluta voluptates eligendi quos amet quam rerum'
   },{
-    text: 'thaison reis de oliveira'
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia enim doloremque omnis totam soluta voluptates eligendi quos amet quam rerum'
   },{
-    text: 'thaison reis de oliveira'
-  },{
-    text: 'thaison reis de oliveira'
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia enim doloremque omnis totam soluta voluptates eligendi quos amet quam rerum'
   }];
-  
 
   return (
     <div>
