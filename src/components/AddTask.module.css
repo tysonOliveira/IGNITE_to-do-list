@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  
   width: 5.625rem;
   height: 3.3125rem;
   color: #fff;
@@ -70,3 +70,7 @@
   color: #4EA8DE;
 }
 
+form {
+  display: flex;
+  gap: 0.4rem;
+}
