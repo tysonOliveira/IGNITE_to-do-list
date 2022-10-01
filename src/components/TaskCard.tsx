@@ -10,13 +10,13 @@ interface TaskProps {
 export function TaskCard({text, onDeleteTask}: TaskProps) {
   function handleDeleteTask() {
     onDeleteTask(text);
-  }
+  } 
   
   return (
     <div className={style.taskCard}>
       <div className={style.container} >
         <input type="checkbox" />
-        <span className={style.check}></span>
+        <span className={style.check} ></span>
       </div>
 
       <p >{text}</p>

@@ -1,5 +1,5 @@
 import { PlusCircle } from 'phosphor-react';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 
 import style from './AddTask.module.css';
 
@@ -11,13 +11,15 @@ export function AddTask() {
 
   const [newTaskText, setNewTaskText] = useState('');
 
-
   function handleNewTaskText(event: FormEvent) {
     event.preventDefault();
     
     setTaskText([...taskText, newTaskText]);
-    setNewTaskText('');
-    console.log(newTaskText);
+
+    // Adiciona '' dentro de 'newTaskText' em seguida adiciona
+    // 'newTaskText' no value do input para limpar o texto após
+    // enviarmos o formulário
+    setNewTaskText('');  
   }
 
   function handleNewTaskTextChange(event: ChangeEvent<HTMLInputElement>) {
@@ -26,11 +28,16 @@ export function AddTask() {
     setNewTaskText(event.target.value);
   }
 
+  // Exibe uma mensagem caso tente enviar o formulário sem um texto no input 
+  function handleNewTaskInvalid(event: InvalidEvent<HTMLInputElement>) {
+    // Mensagem a ser exibida
+    event.target.setCustomValidity('Esse campo é obrigatório');
+  }
+  
   function deleteTask(taskToDelete: string) {
     const deletarTarefa = taskText.filter(task => {
       return task !== taskToDelete;
     })
-
     setTaskText(deletarTarefa);
   }
 
@@ -42,7 +49,10 @@ export function AddTask() {
             className={style.taskName} 
             type="text" 
             placeholder="Adicione uma nova tarefa" 
+            value={newTaskText}   // Adiciona a variável 'newTaskText' para limpar o input
             onChange={handleNewTaskTextChange} 
+            onInvalid={handleNewTaskInvalid}  
+            required
           />
 
           <button 
