@@ -73,7 +73,7 @@ export function AddTask() {
           <span>Concluídas <span className={style.info}>2 de {taskText.length}</span></span>
         </header>
 
-        {taskText.length ? taskText.map(item => <TaskCard text={item} onDeleteTask={deleteTask} />) : <TaskArea/>}
+        {taskText.length ? taskText.map(item => <TaskCard text={item} onDeleteTask={deleteTask}  />) : <TaskArea/>}
 
       </section>
     </div>

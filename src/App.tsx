@@ -7,7 +7,6 @@ export default function App() {
   return (
     <div>
       <Header />
-
       <main>
         <AddTask />
       </main>
