@@ -8,10 +8,11 @@ import { TaskCard } from './TaskCard';
 
 export function AddTask() {
   const [taskText, setTaskText] = useState<string[]>([]);
-
   const [newTaskText, setNewTaskText] = useState('');
+  const [countTasksChecked, setCountTasksChecked] = useState(0);
 
   function handleNewTaskText(event: FormEvent) {
+    // Retira o comportamento padrão da tag form de aprir outra página ao enviar o formulário (submit)
     event.preventDefault();
     
     setTaskText([...taskText, newTaskText]);
@@ -34,11 +35,20 @@ export function AddTask() {
     event.target.setCustomValidity('Esse campo é obrigatório');
   }
   
+  /* A função traz como parâmetro o texto (tarefa) que queremos excluir (taskToDelete) trazida
+  do componente filho 'TaskCard' quando clicamos no botão para deletar */
   function deleteTask(taskToDelete: string) {
-    const deletarTarefa = taskText.filter(task => {
+    /* Executa o metodo filter em 'taskText' gerando um novo array sem a task que queremos excluir
+    e passa para newTaskTextArray o novo array */ 
+    const newTaskTextArray = taskText.filter(task => {
       return task !== taskToDelete;
-    })
-    setTaskText(deletarTarefa);
+    }) 
+    // Adiciona o novo array em setTaskText
+    setTaskText(newTaskTextArray);
+  }
+
+  function tasksChecked() {
+
   }
 
   return (
@@ -73,7 +83,11 @@ export function AddTask() {
           <span>Concluídas <span className={style.info}>2 de {taskText.length}</span></span>
         </header>
 
-        {taskText.length ? taskText.map(item => <TaskCard text={item} onDeleteTask={deleteTask}  />) : <TaskArea/>}
+        {/* Testa se existe algum texto em taskText, se existir percorre o taskText usando o map, se não mostra '<TaskArea/>' */}
+        {taskText.length ? taskText.map(item => 
+          // Envia a função deleteTask para o componente filho
+          <TaskCard text={item} onDeleteTask={deleteTask} onTasksChecked={tasksChecked}  />
+        ) : <TaskArea/>}
 
       </section>
     </div>
