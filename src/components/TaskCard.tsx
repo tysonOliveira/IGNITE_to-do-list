@@ -5,22 +5,20 @@ import style from './TaskCard.module.css';
 interface TaskProps {
   text: string;
   onDeleteTask: (task: string) => void;
-  checkboxChecked?: (check: boolean) => void
-  onTasksChecked: () => void
+  onCountTasks: (checkbox: boolean) => void
 }
 
-export function TaskCard({ text, onDeleteTask }: TaskProps) {
+export function TaskCard({ text, onDeleteTask, onCountTasks }: TaskProps) {
   const [isChecked, setIsChecked] = useState(false);
-  
-  /* Em typescript é necessário passarmos como parâmetro não só o 'event', mas
-  também o tipo de evento 'ChangeEvent' e qual o elemento HTML 'HTMLInputElement' */ 
-  function checkboxChecked(event: ChangeEvent<HTMLInputElement>) {
-    // Se o input checkbox estiver checked, muda o estado para true
-    event.target.checked && setIsChecked(true);  
-  }
 
-  function handleCountTasksChecked() {
-    console.log('checked');
+  function handleIsChecked(event: ChangeEvent<HTMLInputElement>) {
+    if (event.target.checked) {
+      setIsChecked(true);
+      onCountTasks(true);
+    } else {
+      setIsChecked(false);
+      onCountTasks(false);
+    }
   }
 
   function handleDeleteTask() {
@@ -32,11 +30,11 @@ export function TaskCard({ text, onDeleteTask }: TaskProps) {
   return (
     <div className={style.taskCard}>
       <div className={style.container} >
-        <input type="checkbox" onChange={checkboxChecked} onClick={handleCountTasksChecked} />
+        <input type="checkbox" onChange={handleIsChecked} />
         <span className={style.check} ></span>
       </div>
 
-      <p>{text}</p>
+      <p className={isChecked ? style.checkbox1 : style.checkbox2} >{text}</p>
       <button onClick={handleDeleteTask} title='Deletar tarefa' > <Trash size={20} /></button>
     </div>
   )

@@ -91,3 +91,17 @@
   color: #E25858;
   cursor: pointer;
 }
+
+.checkbox1 {
+  text-decoration-line: line-through;
+  width: auto;
+  word-wrap:break-word;
+  
+}
+
+.checkbox2 {
+  text-decoration: none;
+  width: auto;
+  word-wrap:break-word;
+  
+}
