@@ -80,16 +80,19 @@
 .container input:checked ~ .check:after {
   display: block;
 }
+.p {
+  width: 39.5rem;
+}
 
 .taskCard p {
   text-align: left;
-  width: 39.5rem; 
+  width: 100%; 
   padding: 0 0.75rem 0 0.75rem;
 }
 
 .taskCard-ativo p {
   text-align: left;
-  width: 39.5rem; 
+  width: 100%; 
   padding: 0 0.75rem 0 0.75rem;
 }
 
@@ -122,6 +125,7 @@
 .checkbox_ativo {
   text-decoration-line: line-through;
   width: auto;
+  /* margin: 0 1rem 0 1rem; */
   word-wrap:break-word;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -135,6 +139,7 @@
 .checkbox {
   text-decoration: none;
   width: auto;
+  /* margin: 0 1rem 0 1rem; */
   word-wrap:break-word;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -148,5 +153,17 @@
 @media screen and (max-width: 750px) {
   .taskCard {
     width: 100%;
+  }
+
+  .container {
+    margin-right: 1rem;
+  }
+
+  .taskCard button {
+    margin-left: 1rem;  
+  }
+  
+  .taskCard-ativo button {
+    margin-left: 1rem; 
   }
 }

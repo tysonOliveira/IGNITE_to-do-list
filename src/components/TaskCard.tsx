@@ -37,7 +37,6 @@ export function TaskCard({ text, onDeleteTask, onCountTasks }: TaskProps) {
       </div>
 
       <div className={style.p}>
-
         <p className={isChecked ? style.checkbox_ativo : style.checkbox} >{text}</p>
       </div>
       <button onClick={handleDeleteTask} title='Deletar tarefa' > <Trash size={20} /></button>
