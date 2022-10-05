@@ -22,7 +22,7 @@ export function TaskCard({ text, onDeleteTask, onCountTasks }: TaskProps) {
       onCountTasks(false);
     }
   }
-  //468798797
+
   function handleDeleteTask() {
     /* Passa para a função o texto que queremos excluir. Esta função é executada
     no componente pai 'AddTask' */
