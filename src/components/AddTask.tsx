@@ -12,11 +12,10 @@ export function AddTask() {
   const [countTasksChecked, setCountTasksChecked] = useState(0);
 
   function handleNewTaskText(event: FormEvent) {
-    // Retira o comportamento padrão da tag form de aprir outra página ao enviar o formulário (submit).
+    // Retira o comportamento padrão da tag form de aprir outra página ao enviar o formulário.
     event.preventDefault();
     
     setTaskText([...taskText, newTaskText]);
-
     // Limpa o input após criar uma tarefa
     setNewTaskText('');  
   }
@@ -35,7 +34,6 @@ export function AddTask() {
 
   // Deleta a tarefa passada como parâmetro pelo componente filho "TaskCard".
   function deleteTask(taskToDelete: string) {
-
     // Cria um novo array sem a task passada como parâmetro.
     const newTaskTextArray = taskText.filter(task => {
       return task !== taskToDelete;
