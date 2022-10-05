@@ -6,7 +6,7 @@ import './TaskCard.module.css';
 
 interface TaskProps {
   text: string;
-  onDeleteTask: (task: string) => void;
+  onDeleteTask: (task: string, check: boolean) => void;
   onCountTasks: (checkbox: boolean) => void
 }
 
@@ -26,7 +26,7 @@ export function TaskCard({ text, onDeleteTask, onCountTasks }: TaskProps) {
   function handleDeleteTask() {
     /* Passa para a função o texto que queremos excluir. Esta função é executada
     no componente pai 'AddTask' */
-    onDeleteTask(text);
+    onDeleteTask(text, isChecked);
   }
 
   return (

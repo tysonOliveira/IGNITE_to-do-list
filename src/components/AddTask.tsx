@@ -33,13 +33,14 @@ export function AddTask() {
   }
 
   // Deleta a tarefa passada como parâmetro pelo componente filho "TaskCard".
-  function deleteTask(taskToDelete: string) {
+  function deleteTask(taskToDelete: string, checked: boolean) {
     // Cria um novo array sem a task passada como parâmetro.
     const newTaskTextArray = taskText.filter(task => {
       return task !== taskToDelete;
     }) 
     // Adiciona o novo array em setTaskText.
     setTaskText(newTaskTextArray);
+    checked && setCountTasksChecked(item => item - 1);
   }
 
   function countTasks(checked: boolean) {
