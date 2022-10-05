@@ -11,11 +11,16 @@ export function AddTask() {
   const [newTaskText, setNewTaskText] = useState('');
   const [countTasksChecked, setCountTasksChecked] = useState(0);
 
+ 
   function handleNewTaskText(event: FormEvent) {
     // Retira o comportamento padrão da tag form de aprir outra página ao enviar o formulário.
     event.preventDefault();
     
-    setTaskText([...taskText, newTaskText]);
+    if(taskText.includes(newTaskText)) {
+      console.log('Já existe uma tarefa com este nome')
+    } else {
+      setTaskText([...taskText, newTaskText]);
+    }
     // Limpa o input após criar uma tarefa
     setNewTaskText('');  
   }
@@ -50,7 +55,7 @@ export function AddTask() {
   return (
     <div>
       <section className={style.task}>
-        <form onSubmit={handleNewTaskText}>
+        <form onSubmit={handleNewTaskText} >
           <input 
             className={style.taskName} 
             type="text" 
