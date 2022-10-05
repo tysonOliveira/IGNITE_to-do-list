@@ -145,3 +145,8 @@
   -webkit-box-orient: vertical;
 }
 
+@media screen and (max-width: 750px) {
+  .taskCard {
+    width: 100%;
+  }
+}

@@ -55,7 +55,7 @@ export function AddTask() {
   return (
     <div>
       <section className={style.task}>
-        <form onSubmit={handleNewTaskText} >
+        <form onSubmit={handleNewTaskText} className={style.teste}>
           <input 
             className={style.taskName} 
             type="text" 

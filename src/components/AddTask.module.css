@@ -24,7 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  gap: 0.4rem;
+  padding: 0 1rem 0 1rem;
   width: 5.625rem;
   height: 3.3125rem;
   color: #fff;
@@ -74,4 +75,14 @@
 form {
   display: flex;
   gap: 0.4rem;
+}
+
+@media screen and (max-width: 750px) {
+  .teste {
+    width: 100%;
+  }
+  
+  .taskInfoHeader {
+    width: 100%;
+  }
 }
