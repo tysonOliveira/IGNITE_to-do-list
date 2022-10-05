@@ -22,7 +22,7 @@ export function TaskCard({ text, onDeleteTask, onCountTasks }: TaskProps) {
       onCountTasks(false);
     }
   }
-
+  //dsadkasd
   function handleDeleteTask() {
     /* Passa para a função o texto que queremos excluir. Esta função é executada
     no componente pai 'AddTask' */
